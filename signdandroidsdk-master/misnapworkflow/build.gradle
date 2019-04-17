@@ -1,0 +1,121 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion project.coreMinSdk
+        targetSdkVersion project.targetSdkVersion
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                jvmArgs '-noverify'
+//                jacoco {
+//                    includeNoLocationClasses = true
+//                }
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+
+        release {
+            signingConfig signingConfigs.debug
+            debuggable false
+            jniDebuggable false
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:percent:$supportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "org.greenrobot:eventbus:$eventbusVersion"
+
+    // Add dependency for MiSnap external API
+
+    // implementation "id.signd.android.plugins:api:0.0.1"
+
+    //  implementation "id.signd.android.plugins:misnapcamera:0.0.1"
+
+    //  implementation "id.signd.android.plugins:mibidata:0.0.1"
+
+    //  implementation 'id.signd.android.plugins:misnapscience:0.0.1'
+
+    // Add dependency for rotating bitmap
+
+    // implementation 'id.signd.android.plugins:imageutils:0.0.1'
+
+    // Add dependency for MiSnap
+
+    // implementation 'id.signd.android.plugins:misnapcontroller:0.0.1'
+
+    // Add dependency for barcode scanning
+
+    // implementation 'id.signd.android.plugins:barcode:0.0.1'
+
+    // implementation 'id.signd.android.plugins:barcodecontroller:0.0.1'
+
+    // // Add dependency for credit card scanning
+
+    // implementation 'id.signd.android.plugins:cardio:0.0.1'
+
+    // implementation 'id.signd.android.plugins:creditcardcontroller:0.0.1'
+    implementation project(':design')
+
+    // Add dependencies for Unit Testing
+
+    androidTestImplementation "com.linkedin.dexmaker:dexmaker-mockito:$dexmakerVersion"
+
+    // Add dependencies for automated Black-box testing with Robotium
+
+    // androidTestImplementation "com.jayway.android.robotium:robotium-solo:$robotiumVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "com.squareup.assertj:assertj-android:$androidAssertJVersion"
+    implementation project(':api-release')
+    implementation project(':imageutils-release')
+    implementation project(':mibidata-release')
+    implementation project(':misnapcamera-release')
+    implementation project(':barcodecontroller-release')
+    implementation project(':barcode-release')
+    implementation project(':misnapscience-release')
+    implementation project(':misnapcontroller-release')
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            groupId "id.signd.android.plugins"
+            artifactId "misnapworkflow"
+            version "0.0.2"
+            /*repositories {
+                repository {
+                    id 'MicroblinkRepo'
+                    url 'http://maven.microblink.com'
+                }
+            }*/
+        }
+    }
+}

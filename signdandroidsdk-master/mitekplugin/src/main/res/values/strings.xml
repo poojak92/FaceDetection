@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MitekPlugin</string>
+    <string name="title_activity_init">InitActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="id_scan_msg">please make your id ready for scanning</string>
+    <string name="selfie_scan_msg">Selfie time!</string>
+    <string name="hello_misnap_home" translatable="false">Home</string>
+    <string name="hello_misnap_result_code" translatable="false">Result Code</string>
+    <string name="hello_misnap_warnings" translatable="false">Warnings</string>
+    <string name="hello_misnap_four_corners" translatable="false">Four Corners</string>
+    <string name="hello_misnap_mibi_data" translatable="false">MIBI Data</string>
+    <string name="results_label_mibi" translatable="false">MIBI:</string>
+    <string name="results_button_done">Continue</string>
+</resources>

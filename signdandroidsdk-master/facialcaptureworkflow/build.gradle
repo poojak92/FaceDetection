@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion project.coreMinSdk
+        targetSdkVersion project.targetSdkVersion
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:support-annotations:$supportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation "com.android.support:support-fragment:$supportVersion"
+    // Eventbus dependency
+    implementation "org.greenrobot:eventbus:$eventbusVersion"
+    //implementation "id.signd.android.plugins:face-facialcapturecontroller:0.0.1"
+    // implementation "id.signd.android.plugins:face-facialcapturescience:0.0.1"
+    // add misnap dependencies
+    //  implementation 'id.signd.android.plugins:api:0.0.1'
+    // implementation "id.signd.android.plugins:misnapcamera:0.0.1"
+    // implementation 'id.signd.android.plugins:mibidata:0.0.1'
+    implementation project(':design')
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+    testImplementation "junit:junit:$junitVersion"
+    implementation project(':misnapcamera-release')
+    implementation project(':mibidata-release')
+    implementation project(':api-release')
+    implementation project(':facialcapturecontroller-release')
+    implementation project(':facialcapturescience-release')
+    implementation project(':facialcapturescienceface-release')
+    implementation project(':facialcapturelivenessliveness-release')
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            groupId "id.signd.android.plugins"
+            artifactId "facialcaptureworkflow"
+            version "0.0.2"
+        }
+    }
+}
+

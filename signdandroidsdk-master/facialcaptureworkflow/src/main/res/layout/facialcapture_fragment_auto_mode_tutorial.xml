@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/facialcapture_background">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_blink_image_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.225"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_blink_image_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.775"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_blink_image_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.045"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_blink_image_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.695"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.072"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.928"/>
+
+
+    <ImageView
+        android:id="@+id/auto_mode_tutorial_blinking_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/facialcapture_auto_mode_tutorial_tts"
+        android:src="@drawable/facialcapture_tutorial_animation"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_blink_image_top"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_blink_image_bottom"
+        app:layout_constraintLeft_toRightOf="@id/guideline_blink_image_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_blink_image_right"/>
+
+    <TextView
+        android:id="@+id/auto_mode_tutorial_text_instructions"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/facialcapture_auto_mode_tutorial_tts"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:text="@string/facialcapture_auto_mode_tutorial_tts"
+        android:textColor="@color/facialcapture_black"
+        app:layout_constraintTop_toBottomOf="@+id/auto_mode_tutorial_blinking_image"
+        app:layout_constraintBottom_toTopOf="@+id/auto_mode_tutorial_button_start"/>
+
+    <Button
+        android:id="@+id/auto_mode_tutorial_button_start"
+        style="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/facialcapture_two_state_button_background"
+        android:contentDescription="@string/facialcapture_auto_mode_tutorial_button_text"
+        android:maxLines="1"
+        android:text="@string/facialcapture_auto_mode_tutorial_button_text"
+        android:textColor="@color/facialcapture_next_button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guideline_button_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_button_right"
+        />
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/auto_mode_help_cancel_button_text"-->
+        <!--android:textSize="@dimen/cancel_button_text_size"-->
+        <!--android:contentDescription="@string/auto_mode_help_cancel_button_text"-->
+        <!--android:id="@+id/fragment_video_first_time_tutorial_button_cancel"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:facialcapture_background="@android:color/transparent"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:gravity="center_vertical|center_horizontal"-->
+        <!--android:layout_marginBottom="@dimen/button_bottom_margin" />-->
+
+</android.support.constraint.ConstraintLayout>

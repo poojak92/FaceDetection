@@ -1,0 +1,114 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'maven-publish'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+//apply plugin: 'com.github.dcendents.android-maven'
+
+
+android {
+    compileSdkVersion project.compileSdkVersion
+    defaultConfig {
+        minSdkVersion project.coreMinSdk
+        targetSdkVersion project.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$appcompat_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-alpha04'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation 'org.kodein.di:kodein-di-generic-jvm:5.0.0'
+    implementation 'org.kodein.di:kodein-di-framework-android:5.0.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.23.3'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation project(':core')
+    //implementation project(':demoplugin')
+    implementation project(':mitekplugin')
+    implementation project (':design')
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            groupId "id.signd.android.plugins"
+            artifactId "signdsdk"
+            version "0.0.2"
+            /*repositories {
+                repository {
+                    id 'MicroblinkRepo'
+                    url 'http://maven.microblink.com'
+                }
+            }*/
+        }
+    }
+}
+/*
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.groupId
+            artifactId "signdsdk"
+            version project.mavenVersion
+
+            artifact bundleReleaseAar
+
+            pom.withXml {
+                final dependenciesNode = asNode().appendNode('dependencies')
+
+                ext.addDependency = { Dependency dep, String scope ->
+                    if (dep.group == null || dep.version == null || dep.name == null || dep.name == "unspecified")
+                        return // ignore invalid dependencies
+
+                    final dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', dep.group)
+                    dependencyNode.appendNode('artifactId', dep.name)
+                    dependencyNode.appendNode('version', dep.version)
+                    dependencyNode.appendNode('scope', scope)
+
+                    if (!dep.transitive) {
+                        // If this dependency is transitive, we should force exclude all its dependencies them from the POM
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        exclusionNode.appendNode('groupId', '*')
+                        exclusionNode.appendNode('artifactId', '*')
+                    } else if (!dep.properties.excludeRules.empty) {
+                        // Otherwise add specified exclude rules
+                        final exclusionNode = dependencyNode.appendNode('exclusions').appendNode('exclusion')
+                        dep.properties.excludeRules.each { ExcludeRule rule ->
+                            exclusionNode.appendNode('groupId', rule.group ?: '*')
+                            exclusionNode.appendNode('artifactId', rule.module ?: '*')
+                        }
+                    }
+                }
+
+                // List all "compile" dependencies (for old Gradle)
+                configurations.compile.getDependencies().each { dep -> addDependency(dep, "compile") }
+                // List all "api" dependencies (for new Gradle) as "compile" dependencies
+                configurations.api.getDependencies().each { dep -> addDependency(dep, "compile") }
+                // List all "implementation" dependencies (for new Gradle) as "runtime" dependencies
+                configurations.implementation.getDependencies().each { dep -> addDependency(dep, "runtime") }
+            }
+        }
+    }
+}*/

@@ -1,0 +1,3 @@
+include ':app', ':core', ':demoplugin', ':configuration', ':mitekplugin', ':facialcaptureworkflow', ':misnapworkflow',
+        ':libtest', ':design', ':a1test', ':misnapcamera-release', ':mibidata-release', ':api-release', ':facialcapturecontroller-release',
+        ':imageutils-release', ':facialcapturescience-release', ':creditcardcontroller-release', ':cardio-release', ':barcodecontroller-release', ':barcode-release', ':misnapscience-release', ':misnapcontroller-release', ':sanselan-release', ':facialcapturescienceface-release', ':facialcapturelivenessliveness-release'

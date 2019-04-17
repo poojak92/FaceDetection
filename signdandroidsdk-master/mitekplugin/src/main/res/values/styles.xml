@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="MitekAppTheme" parent="Base.Theme.AppCompat.Light" />
+
+    <style name="MitekAppTheme.NoActionBar" parent="MitekAppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MitekAppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MitekAppTheme.PopupOverlay" parent="Base.ThemeOverlay.AppCompat.Light" />
+</resources>

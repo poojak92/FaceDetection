@@ -1,0 +1,123 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion project.coreMinSdk
+        targetSdkVersion project.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$appcompat_version"
+    implementation "com.android.support:design:$supportVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+
+    //implementation "com.android.support:design:$support_design"
+    testImplementation 'junit:junit:4.12'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    // SigndSDK
+
+    //implementation "id.signd.android.plugins:core:0.0.3"
+    implementation project(':core')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.23.3'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation project(':facialcaptureworkflow')
+    implementation project(':design')
+    implementation project(':api-release')
+    implementation project(':facialcapturescience-release')
+    implementation project(':misnapcamera-release')
+    implementation project(':creditcardcontroller-release')
+    implementation project(':cardio-release')
+    implementation project(':sanselan-release')
+    implementation project(':misnapworkflow')
+    implementation 'io.card:android-sdk:5.3.0'
+
+    // Add dependency for MiSnap
+
+    //  implementation "id.signd.android.plugins:api:0.0.1"
+
+    // implementation "id.signd.android.plugins:sanselan:0.0.1"
+
+    //  implementation "id.signd.android.plugins:misnapcamera:0.0.1"
+
+    //implementation "id.signd.android.plugins:misnapworkflow:0.0.1"
+
+    // implementation "id.signd.android.plugins:misnapscience:0.0.1"
+
+    // implementation "id.signd.android.plugins:mibidata:0.0.1"
+
+    // implementation "id.signd.android.plugins:imageutils:0.0.1"
+
+    // implementation "id.signd.android.plugins:misnapcontroller:0.0.1"
+
+    // Add dependency for Card.io
+
+    // implementation "id.signd.android.plugins:cardio:0.0.1"
+
+    // implementation "id.signd.android.plugins:creditcardcontroller:0.0.1"
+
+    // Add dependency for Barcodes
+
+    //   implementation "id.signd.android.plugins:barcode:0.0.1"
+
+    //  implementation "id.signd.android.plugins:barcodecontroller:0.0.1"
+
+    //mitek face capture
+
+    //  implementation "id.signd.android.plugins:face-facialcapturecontroller:0.0.1"
+
+    // implementation "id.signd.android.plugins:face-facialcapturelivenessliveness:0.0.1"
+
+    // implementation "id.signd.android.plugins:face-facialcapturesciencecrypto:0.0.1"
+
+    //  implementation "id.signd.android.plugins:face-facialcapturescienceface:0.0.1"
+
+    //  implementation "id.signd.android.plugins:face-facialcapturescience:0.0.1"
+
+    //implementation("id.signd.android.plugins:face-facialcaptureworkflow:0.0.1")
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            groupId "id.signd.android.plugins"
+            artifactId "mitekplugin"
+            version "0.0.2"
+            /*repositories {
+                repository {
+                    id 'MicroblinkRepo'
+                    url 'http://maven.microblink.com'
+                }
+            }*/
+        }
+    }
+}

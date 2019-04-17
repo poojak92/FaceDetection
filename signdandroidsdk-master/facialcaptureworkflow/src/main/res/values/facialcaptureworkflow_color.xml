@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="facialcapture_video_help_background_scr">#E1E1E2</color>
+    <color name="facialcapture_manual_help_background_scr">#E1E1E2</color>
+    <color name="facialcapture_failover_background_scr">#E1E1E2</color>
+
+    <!--TutorialHelpFragment-->
+    <color name="facialcapture_next_button_text_color">#FFFFFFFF</color>
+    <color name="facialcapture_tutorial_help_fragment_textview_color">#000000</color>
+    <color name="facialcapture_black">#000000</color>
+</resources>

@@ -1,0 +1,61 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/misnap_layout_manualFirstTimeTutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/misnap_help_repeating_background_dots"
+    android:paddingBottom="@dimen/misnapworkflow_activity_vertical_margin"
+    android:paddingLeft="@dimen/misnapworkflow_activity_horizontal_margin"
+    android:paddingRight="@dimen/misnapworkflow_activity_horizontal_margin"
+    android:paddingTop="@dimen/misnapworkflow_activity_vertical_margin">
+
+    <View
+        android:id="@+id/misnap_manual_help_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/ft_manual_tut_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/background_floating_material_dark"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_dont_show_again"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/id_dont_show_again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/misnap_manual_help_buttons"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/ft_manual_tut_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/id_manual_ft_second_btn_string"
+        android:text="@string/id_manual_ft_second_btn_string"
+        android:visibility="visible"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/misnap_tutorial_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/misnap_manual_help_buttons"
+        android:layout_above="@id/misnap_manual_help_buttons" />
+
+    <include
+        android:id="@+id/misnap_manual_ft_message"
+        layout="@layout/misnap_arrow_help_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ft_manual_tut_btn"
+        android:layout_above="@id/misnap_manual_help_buttons" />
+
+
+</android.support.constraint.ConstraintLayout>

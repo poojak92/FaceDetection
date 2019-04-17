@@ -1,0 +1,167 @@
+<resources>
+    <string name="btn_go">Go</string>
+    <string name="id_type_passport">Passport</string>
+    <string name="id_type_id_card">ID Card</string>
+    <string name="id_type_driver_licence">Driver License</string>
+    <string name="msg_try_again">Try Again</string>
+    <string name="txt_select_id">Please select the type of ID you want to scan</string>
+    <string name="facialcapture_camera_permission_title">Permission reason</string>
+    <string name="facialcapture_camera_permission_rationale">Camera access is required to snap a photo of your face.</string>
+
+    <string name="facialcapture_auto_mode_tutorial_tts">Get ready to center your face in the oval and blink</string>
+    <string name="facialcapture_auto_mode_tutorial_button_text">Continue</string>
+
+    <string name="facialcapture_overlay_tts">Center your face without hats, scarfs, glasses, hair coverage. Blink when ready</string>
+    <string name="facialcapture_overlay_cancel_button">Cancel</string>
+    <string name="facialcapture_overlay_help_button">Help</string>
+
+    <string name="facialcapture_timeout_tts">"Time's up, we couldn't take your photo...". How would you like to try again, auto capture or take manual capture?</string>
+    <string name="facialcapture_timeout_message_1">"Time's up, we couldn't take your photo..."</string>
+    <string name="facialcapture_timeout_message_2">How would you like to try again?</string>
+    <string name="facialcapture_timeout_auto_capture">Auto Capture</string>
+    <string name="facialcapture_timeout_manual_capture">Take Manual Capture</string>
+    <string name="facialcapture_timeout_auto_capture_button_text">Auto</string>
+    <string name="facialcapture_timeout_manual_capture_button_text">Manual</string>
+
+    <string name="facialcapture_auto_mode_help_tts">Please do: center your face, neutral facial expression, blink when ready. Also no hats, scarfs, hair covering face... no glasses</string>
+    <string name="facialcapture_auto_mode_help_do_title">Please DO:</string>
+    <string name="facialcapture_auto_mode_help_do_message_first">Center your face</string>
+    <string name="facialcapture_auto_mode_help_do_message_second">Neutral facial expression</string>
+    <string name="facialcapture_auto_mode_help_do_message_third">Blink when ready</string>
+    <string name="facialcapture_auto_mode_help_do_not_title">Also:</string>
+    <string name="facialcapture_auto_mode_help_do_not_message_first">No hats, scarfs, hair covering face...</string>
+    <string name="facialcapture_auto_mode_help_do_not_message_second">No glasses</string>
+    <string name="facialcapture_auto_mode_help_process_button_text">Continue</string>
+    <string name="facialcapture_auto_mode_help_cancel_button_text">Cancel</string>
+
+    <string name="facialcapture_manual_mode_help_tts">Please do: Center your face, neutral facial expression, also, no hats, scarfs, hair covering face...No glasses</string>
+    <string name="facialcapture_manual_mode_help_do_title">Please DO:</string>
+    <string name="facialcapture_manual_mode_help_do_message_first">Center your face</string>
+    <string name="facialcapture_manual_mode_help_do_message_second">Neutral facial expression</string>
+    <string name="facialcapture_manual_mode_help_do_not_title">Also:</string>
+    <string name="facialcapture_manual_mode_help_do_not_message_first">No hats, scarfs, hair covering face...</string>
+    <string name="facialcapture_manual_mode_help_do_not_message_second">No glasses</string>
+
+    <string name="facialcapture_overlay_message_empty" translatable="false"></string>
+    <string name="facialcapture_overlay_message_hold_phone_upright">Hold phone upright</string>
+    <string name="facialcapture_overlay_message_face_not_found">Face not detected</string>
+    <string name="facialcapture_overlay_message_face_not_frontal">Face towards the camera</string>
+    <string name="facialcapture_overlay_message_eyes_not_found">Eyes not detected</string>
+    <string name="facialcapture_overlay_message_face_move_further_away">Move farther away</string>
+    <string name="facialcapture_overlay_message_face_get_closer">Get closer</string>
+    <string name="facialcapture_overlay_message_poor_image_quality">Improve lighting</string>
+    <string name="facialcapture_overlay_message_lighting_fail">Improve lighting</string>
+    <string name="facialcapture_overlay_message_sharpness_fail">Hold still or improve lighting</string>
+    <string name="facialcapture_overlay_message_exposure_fail">Improve lighting</string>
+    <string name="facialcapture_overlay_message_gray_fail">Improve lighting</string>
+    <string name="facialcapture_overlay_message_blink_now">Blink now</string>
+    <string name="facialcapture_overlay_message_tap_now">Tap now</string>
+    <string name="facialcapture_overlay_success_text">Thank you,\nwe just took your photo.</string>
+
+    <string name="id_camera_permission_title">Permission Reason</string>
+    <string name="id_camera_permission_rationale">Camera access is required to snap a photo of your document.</string>
+    <string name="id_video_ft_tut_message">Hold Steady and we will take a picture for you</string>
+    <string name="id_manual_ft_tut_message">Hold Steady and press the snap button when ready</string>
+    <string name="id_video_session_timeout_first_btn_string">Cancel</string>
+    <string name="id_video_session_timeout_second_btn_string">Try Again</string>
+    <string name="id_failover_first_btn_string">Cancel Capture</string>
+    <string name="id_failover_second_btn_string">Capture Manually</string>
+    <string name="id_detailed_failover_title">We couldn\'t find a clean image.</string>
+    <string name="id_detailed_failover_first_btn_string">Cancel Capture</string>
+    <string name="id_detailed_failover_second_btn_string">Capture Manually</string>
+    <string name="id_detailed_failover_third_btn_string">Retry Autocapture</string>
+    <string name="id_video_help_first_btn_string">Cancel</string>
+    <string name="id_video_help_second_btn_string">Continue</string>
+    <string name="id_video_ft_second_btn_string">Continue</string>
+    <string name="id_manual_help_first_btn_string">Cancel</string>
+    <string name="id_manual_help_second_btn_string">Continue</string>
+    <string name="id_manual_ft_second_btn_string">Continue</string>
+    <string name="id_multi_tap_first_btn_string">Cancel</string>
+    <string name="id_multi_tap_second_btn_string">Continue</string>
+    <string name="id_manual_capture_please_wait">Hold still, please wait…</string>
+    <string name="id_auto_capture_not_supported">This device does not support auto-capture mode. Press the snap photo button when you are ready to snap a picture.</string>
+    <string name="id_seamless_failover">Switched to manual capture mode. Press the Snap Photo button when ready.</string>
+
+    <string name="id_video_help_message_1_check">Try placing the check on a dark, well lit surface</string>
+    <string name="id_video_help_message_1_document">Try placing the document on a dark, well lit surface</string>
+    <string name="id_video_help_message_2"><![CDATA[Hold still. <b><i>We\'ll take the photo for you</i></b>]]></string>
+
+    <string name="id_video_ft_message_1_check">Center the check on the screen</string>
+    <string name="id_video_ft_message_1_document">Center the document on the screen</string>
+    <string name="id_video_ft_message_2"><![CDATA[Hold still. <b><i>We\'ll take the photo for you</i></b>]]></string>
+
+    <string name="id_manual_help_message_1_check">Place the check on a dark, well lit surface with all 4 corners visible</string>
+    <string name="id_manual_help_message_1_document">Place the document on a dark, well lit surface with all 4 corners visible</string>
+    <string name="id_manual_help_message_2"><![CDATA[Press the <b><i>Snap Photo</i></b> button when ready]]></string>
+
+    <string name="id_manual_ft_message_1_check">Center the check with all 4 corners visible</string>
+    <string name="id_manual_ft_message_1_document">Center the document with all 4 corners visible</string>
+    <string name="id_manual_ft_message_2"><![CDATA[Press the <b><i>Snap Photo</i></b> button when ready]]></string>
+
+    <string name="id_tts_failover_check">Center the check with all 4 corners visible and press the snap photo button when ready.</string>
+    <string name="id_tts_failover_document">Center the document with all 4 corners visible and press the snap photo button when ready.</string>
+    <string name="id_tts_video_timeout_check">Try placing the check on a dark well lit surface and hold still. We\'ll take the photo for you.</string>
+    <string name="id_tts_video_timeout_document">Try placing the document on a dark well lit surface and hold still. We\'ll take the photo for you.</string>
+
+    <string name="id_more_light">Move to a well-lit area</string>
+    <string name="id_less_light">Too bright</string>
+    <string name="id_hold_steady">Hold steady</string>
+    <string name="id_get_closer">Move closer</string>
+    <string name="id_too_close">Move farther away</string>
+    <string name="id_hold_center">Reduce angle</string>
+    <string name="id_glare">Reduce glare</string>
+    <string name="id_busy_background">Use a plain background</string>
+    <string name="id_low_contrast">Use a dark background</string>
+    <string name="id_wrong_doc_generic">Wrong document suspected</string>
+    <string name="id_wrong_doc_check_back_expected">Flip check over</string>
+    <string name="id_wrong_doc_check_front_expected">Use front of check</string>
+
+    <string name="id_wrong_document_check_front_found">Please flip the check over. Check back was expected, but check front was found.</string>
+
+    <string name="id_failure_reason_unknown">Center the document with all 4 corners visible</string>
+    <string name="id_failure_reason_four_corner_confidence">Center the document with all 4 corners visible</string>
+    <string name="id_failure_reason_horizontal_min_fill">Move the device closer to the document</string>
+    <string name="id_failure_reason_min_brightness">Place the document in a well-lit area</string>
+    <string name="id_failure_reason_max_brightness">Place the document in an area with less light</string>
+    <string name="id_failure_reason_skew_angle">Hold the device directly over the document</string>
+    <string name="id_failure_reason_sharpness">Hold the device steady</string>
+    <string name="id_failure_reason_min_padding">Move the device farther away from the document</string>
+    <string name="id_failure_reason_rotation_angle">Hold the device directly over the document</string>
+    <string name="id_failure_reason_low_contrast">Center the document on a dark background</string>
+    <string name="id_failure_reason_busy_background">Place the document on a plain uncluttered background</string>
+    <string name="id_failure_reason_wrong_doc_generic">Wrong document suspected</string>
+    <string name="id_failure_reason_wrong_doc_check_front">Use the front of the check with all numbers visible</string>
+    <string name="id_failure_reason_wrong_doc_check_back">Flip the check to scan the back</string>
+    <string name="id_failure_reason_glare">Avoid glare on the document</string>
+
+    <string name="id_overlay_flash_on">Flash is on</string>
+    <string name="id_overlay_flash_off">Flash is off</string>
+    <string name="id_overlay_help">Help</string>
+    <string name="id_overlay_cancel">Cancel</string>
+    <string name="id_overlay_capture">Snap Photo</string>
+    <string name="id_overlay_snap_message">Snap!</string>
+    <string name="id_check_front_text">Front Image</string>
+    <string name="id_check_back_text">Back Image</string>
+    <string name="id_default_text">Back Image</string>
+    <string name="id_ghost_image_remittance">Center payment stub here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_remittance_manual"><![CDATA[Center payment stub here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_check">Center check here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_check_manual"><![CDATA[Center check here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_drivers_license">Center driver\'s license here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_drivers_license_manual"><![CDATA[Center driver\'s license here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_id_card">Center ID card here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_id_card_manual"><![CDATA[Center ID card here, then press the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_insurance_card">Center insurance card here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_insurance_card_manual"><![CDATA[Center insurance card here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_vin_manual"><![CDATA[Center VIN here then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_w2">Center W2 here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_w2_manual"><![CDATA[Center W2 here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_passport">Center passport here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_passport_manual"><![CDATA[Center passport here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_document_landscape">Center card here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_document_landscape_manual"><![CDATA[Center card here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_image_document_portrait">Center document here and wait. \n We\'ll take the photo for you</string>
+    <string name="id_ghost_image_document_portrait_manual"><![CDATA[Center document here, then press <br> the <b><i>Snap Photo</i></b> button when ready]]></string>
+    <string name="id_ghost_barcode_tooltip">Please scan the barcode on the back of the driver\'s license</string>
+    <string name="id_dont_show_again">Don\'t show this again</string>
+</resources>

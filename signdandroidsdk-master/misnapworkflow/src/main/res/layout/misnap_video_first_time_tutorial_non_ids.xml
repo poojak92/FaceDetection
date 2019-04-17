@@ -1,0 +1,95 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/misnap_layout_videoFirstTimeTutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/misnap_help_repeating_background_dots"
+    android:paddingBottom="@dimen/misnapworkflow_activity_vertical_margin"
+    android:paddingLeft="@dimen/misnapworkflow_activity_horizontal_margin"
+    android:paddingRight="@dimen/misnapworkflow_activity_horizontal_margin"
+    android:paddingTop="@dimen/misnapworkflow_activity_vertical_margin">
+
+    <View
+        android:id="@+id/misnap_video_help_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ft_video_tut_btn"
+        android:background="@color/background_floating_material_dark" />
+
+    <CheckBox
+        android:id="@+id/checkbox_dont_show_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ft_video_tut_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/id_dont_show_again"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/ft_video_tut_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/id_video_ft_second_btn_string"
+        android:text="@string/id_video_ft_second_btn_string"
+        android:visibility="visible"
+        tools:ignore="RtlHardcoded" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0475" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.912" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_margin_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_margin_top"
+        app:layout_constraintBottom_toTopOf="@id/misnap_video_help_buttons"
+        app:layout_constraintStart_toEndOf="@id/guideline_margin_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_margin_right">
+
+        <include
+            android:id="@+id/misnap_video_ft_message_1"
+            layout="@layout/misnap_arrow_help_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/misnap_video_ft_message_2"
+            layout="@layout/misnap_arrow_help_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

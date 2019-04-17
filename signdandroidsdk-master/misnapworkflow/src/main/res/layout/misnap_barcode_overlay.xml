@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageOverlay"
+        android:layout_width="360dp"
+        android:layout_height="187dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/misnap_ghost_barcode"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        style="@style/MiSnapWorkflowShadowTheme"
+        android:id="@+id/misnap_barcode_tooltip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
+        android:text="@string/id_ghost_barcode_tooltip"
+        android:textColor="#9e9e9e"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageButton
+        android:id="@+id/misnap_overlay_mitek_logo"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="73dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/misnap_powered_by_mitek"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewport_border">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".10"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_outer_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".10"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_inner_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".35"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".90"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_inner_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".65"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_outer_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".90"/>
+
+        <View
+            android:id="@+id/viewport_border_panel_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+            android:background="@color/misnap_black"/>
+
+        <View
+            android:id="@+id/viewport_border_panel_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_right"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+            android:background="@color/misnap_black"/>
+
+        <View
+            android:id="@+id/viewport_border_panel_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_left"
+            app:layout_constraintRight_toLeftOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline_outer_top"
+            android:alpha="0.5"
+            android:background="@color/misnap_black"/>
+
+        <View
+            android:id="@+id/viewport_border_panel_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_left"
+            app:layout_constraintRight_toLeftOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@id/guideline_outer_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:alpha="0.5"
+            android:background="@color/misnap_black"/>
+
+        <View
+            android:id="@+id/misnap_barcode_rectangle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/guideline_outer_top"
+            app:layout_constraintRight_toLeftOf="@id/guideline_right"
+            app:layout_constraintBottom_toTopOf="@id/guideline_outer_bottom"
+            android:background="@drawable/misnap_barcode_viewport"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/flashButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/misnap_barcode_flashbuttonoff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
